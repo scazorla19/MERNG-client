@@ -8,8 +8,11 @@ import {
 } from "@apollo/client";
 import { setContext } from "apollo-link-context";
 
+// const LOCAL = "http://localhost:5000/";
+const HEROKU = "https://arcane-wave-70063.herokuapp.com/";
+
 const httpLink = createHttpLink({
-	uri: "https://arcane-wave-70063.herokuapp.com/",
+	uri: HEROKU,
 });
 
 const authLink = setContext(() => {
